@@ -36,11 +36,14 @@
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
 }
-
+.imagemobile{
+    display: none;
+}
 .card-right{
     flex-basis: 45%;
     display: flex;
     flex-direction: column;
+    align-items: start;
     padding: 30px;
     background:  hsl(0, 0%, 100%);
     gap: 20px;
@@ -86,6 +89,7 @@
     display: flex;
     gap: 10px;
     align-items: center;
+    width: 100%;
     justify-content: center;
     padding: 17px 0px;
     background: hsl(158, 36%, 37%);
@@ -111,4 +115,39 @@
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width:767px){
+    html{
+        scroll-behavior: smooth;
+    }
+    .container{
+        height: 100dvh;
+        padding: 2% 2%;
+    }
+    .card{
+        flex-direction: column;
+        width: 90dvw;
+        height: 90dvh;
+    }
+    .card-left{
+        flex-basis: 45%;
+    }
+    .imagedesktop{
+        display: none;
+    }
+    .imagemobile{
+        display: block;
+    }
+    .card-left img{
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 0px;
+    }
+    .card-right{
+        flex-basis: 55%;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
 }
